@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <title>Frontend Mentor | FAQ accordion</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+
+  <link rel="stylesheet" type="text/css" href="./style.css">
+  <script>
+    function tab(id) {
+      const imageMinus = document.getElementById(`${id}-minus`)
+      const imagePlus = document.getElementById(`${id}-plus`)
+      const imageP = document.getElementById(`${id}-p`)
+      
+      if (imageMinus.classList.contains("d-hidden")) {
+        imageMinus.classList.remove("d-hidden")
+        imageMinus.classList.add("d-block")
+        imagePlus.classList.remove("d-block")
+        imagePlus.classList.add("d-hidden")
+        imageP.classList.remove("d-hidden")
+        imageP.classList.add("d-block")
+      }
+
+      else {
+        imageMinus.classList.remove("d-block")
+        imageMinus.classList.add("d-hidden")
+        imagePlus.classList.remove("d-hidden")
+        imagePlus.classList.add("d-block")
+        imageP.classList.remove("d-block")
+        imageP.classList.add("d-hidden")
+      }
+      
+      console.log(id)
+    }
+  </script>
+
+</head>
+
+<body>
+  <img class="fundo-roxo" src="./assets/images/background-pattern-desktop.svg">
+  <img class="fundo-roxo-mobile" src="./assets/images/background-pattern-mobile.svg">
+  <div class="cartao">
+
+    <div class="faqs">
+      <img src="./assets/images/icon-star.svg">
+      <h1>
+        FAQs
+      </h1>
+    </div>
+
+    <div class="pergunta" onclick="tab(1)">
+      <img id="1-plus" src="./assets/images/icon-plus.svg">
+      <img id="1-minus" class="d-hidden" src="./assets/images/icon-minus.svg">
+      <h2>
+        What is Frontend Mentor, and how will it help me?
+      </h2>
+    </div>
+
+    <p id="1-p" class="d-hidden">
+      Frontend Mentor offers realistic coding challenges to help developers improve their
+      frontend coding skills with projects in HTML, CSS, and JavaScript. It's suitable for
+      all levels and ideal for portfolio building.
+    </p>
+
+    <div class="linha">
+
+    </div>
+
+    <div class="pergunta" onclick="tab(2)">
+      <img id="2-plus" src="./assets/images/icon-plus.svg">
+      <img id="2-minus" class="d-hidden" src="./assets/images/icon-minus.svg">
+      <h2>
+        Is Frontend Mentor free?
+      </h2>
+    </div>
+
+    <p id="2-p" class="d-hidden">
+      Yes, Frontend Mentor offers both free and premium coding challenges, with the free
+      option providing access to a range of projects suitable for all skill levels.
+    </p>
+
+    <div class="linha">
+
+    </div>
+
+    <div class="pergunta" onclick="tab(3)">
+      <img id="3-plus" src="./assets/images/icon-plus.svg">
+      <img id="3-minus" class="d-hidden" src="./assets/images/icon-minus.svg">
+      <h2>
+        Can I use Frontend Mentor projects in my portfolio?
+      </h2>
+    </div>
+
+    <p id="3-p" class="d-hidden">
+      Yes, you can use projects completed on Frontend Mentor in your portfolio. It's an excellent
+      way to showcase your skills to potential employers!
+    </p>
+
+    <div class="linha">
+
+    </div>
+
+    <div class="pergunta" onclick="tab(4)">
+      <img id="4-plus" src="./assets/images/icon-plus.svg">
+      <img id="4-minus" class="d-hidden" src="./assets/images/icon-minus.svg">
+      <h2>
+        How can I get help if I'm stuck on a challenge?
+      </h2>
+    </div>
+
+    <p id="4-p" class="d-hidden">
+      The best place to get help is inside Frontend Mentor's Discord community. There's a help
+      channel where you can ask questions and seek support from other community members.
+    </p>
+
+  </div>
+
+
+
+</body>
+
+</html>
